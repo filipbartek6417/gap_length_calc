@@ -21,7 +21,7 @@ task CountGaps {
     }
 
     command {
-        grep -o "[Nn\\-]+" ~{assembly_file} | awk '{ total += length($0) } END { print total }' > gap_length.txt
+        grep -o "[Nn-]+" ~{assembly_file} | awk '{ total += length($0) } END { print total }' > gap_length.txt
     }
 
     output {

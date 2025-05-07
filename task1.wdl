@@ -30,7 +30,7 @@ task CountGaps {
 
     runtime {
         docker: "ubuntu:latest"
-        memory: "1 GB"
+        memory: "4 GB"
         cpu: 1
         preemptible: 2
     }

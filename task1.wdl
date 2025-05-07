@@ -20,9 +20,9 @@ task CountGaps {
         File assembly_file
     }
 
-    command {
+    command <<<
          gzip -d -c ~{assembly_file} | grep -v "^>" | grep -o "[Nn\-]" | tr -d "\n" | wc -m > gap_length.txt
-    }
+    >>>
 
     output {
         Int total_gap_length = read_int("gap_length.txt")

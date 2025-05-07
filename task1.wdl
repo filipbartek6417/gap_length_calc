@@ -29,7 +29,7 @@ task CountGaps {
     }
 
     runtime {
-        docker: "debian:bullseye"
+        docker: "ubuntu:latest"
         memory: "1 GB"
         cpu: 1
         preemptible: 2

@@ -21,7 +21,7 @@ task CountGaps {
     }
 
     command {
-        grep -o "[Nn-]+" ~{assembly_file} | tr -d '\n' | wc -m > gap_length.txt
+        grep -v "^>" ~{assembly_file} | grep -o "[Nn-]" | tr -d "\n" | wc -m > gap_length.txt
     }
 
     output {

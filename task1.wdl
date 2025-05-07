@@ -32,6 +32,6 @@ task CountGaps {
         docker: "debian:bullseye"
         memory: "1 GB"
         cpu: 1
-        preemptible: true
+        preemptible: 2
     }
 }
